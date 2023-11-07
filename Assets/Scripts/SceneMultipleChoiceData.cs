@@ -6,11 +6,13 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NewSceneMultipleChoiceData", menuName = "Scene Multiple Choice Data", order = 52)]
 public class SceneMultipleChoiceData : ScriptableObject {
 
-    public List<MultipleChoiceEntry> choices = new List<MultipleChoiceEntry>();
+    public string question;
+
+    public List<MultipleChoiceOption> choices = new List<MultipleChoiceOption>();
     [Serializable]
-    public struct MultipleChoiceEntry
+    public struct MultipleChoiceOption
     {
-        public string question;
+        public string option;
         public bool isAnswer;
     }
 

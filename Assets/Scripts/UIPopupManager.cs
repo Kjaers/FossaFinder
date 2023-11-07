@@ -18,14 +18,14 @@ public class UIPopupManager : MonoBehaviour {
     private object _instanceLock = new object();
     
     public Image popupImage;
-    public GameObject multipleChoicePanel;
+    public UIPopupMultipleChoice multipleChoicePanel;
 
     [Serializable]
     public struct ScenePopup
     {
         public SceneData scene;
         public Image popupImage;
-        public ScriptableObject multipleChoiceData;
+        public SceneMultipleChoiceData multipleChoiceData;
     }
 
     private List<ScenePopup> activePopups = new List<ScenePopup>();
@@ -95,7 +95,8 @@ public class UIPopupManager : MonoBehaviour {
                 if (popupList[i].popupImage != null)
                     popupImage.sprite = popupList[i].popupImage.sprite;
 
-                
+                if (popupList[i].multipleChoiceData != null)
+                    multipleChoicePanel.Initialize(popupList[i].multipleChoiceData);
 
             }
         }
