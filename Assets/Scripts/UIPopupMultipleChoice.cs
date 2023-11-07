@@ -32,7 +32,14 @@ public class UIPopupMultipleChoice : MonoBehaviour
 
     public void ClickOption(UIPopupMultipleChoiceOption option)
     {
-
+        if (option.isAnswer)
+        {
+            Debug.Log("Correct answer clicked!");
+        }
+        else
+        {
+            Debug.Log("Incorrect answer clicked!");
+        }
     }
 
     private void ClearOptions()

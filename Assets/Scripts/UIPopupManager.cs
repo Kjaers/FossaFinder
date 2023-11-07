@@ -30,7 +30,17 @@ public class UIPopupManager : MonoBehaviour {
 
     private List<ScenePopup> activePopups = new List<ScenePopup>();
     public ScenePopup[] scenePopups;
-        
+
+    void Awake()
+    {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        _instance = this;
+        DontDestroyOnLoad(this.gameObject);
+    }
 
     public void UpdatePopup(SceneData sceneData)
     {

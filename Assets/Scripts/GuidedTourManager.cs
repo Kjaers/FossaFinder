@@ -362,6 +362,10 @@ public class GuidedTourManager : MonoBehaviour
             //Display SceneDataInfo
             DisplaySceneDataInfo(sceneDataArray[currentSceneNumber - 1].name, sceneDataArray[currentSceneNumber - 1].forwardAnimationClipName, isNarrationPresent ? sceneDataArray[currentSceneNumber - 1].narration.name : "");
 
+
+            // Handle popups
+            UIPopupManager.Instance.UpdatePopup(sceneDataArray[currentSceneNumber - 1]);
+
             return currentAnimationClipLength;
         }
         return 0f;
