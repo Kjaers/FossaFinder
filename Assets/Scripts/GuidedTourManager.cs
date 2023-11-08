@@ -363,8 +363,6 @@ public class GuidedTourManager : MonoBehaviour
             DisplaySceneDataInfo(sceneDataArray[currentSceneNumber - 1].name, sceneDataArray[currentSceneNumber - 1].forwardAnimationClipName, isNarrationPresent ? sceneDataArray[currentSceneNumber - 1].narration.name : "");
 
 
-            // Handle popups
-            UIPopupManager.Instance.UpdatePopup(sceneDataArray[currentSceneNumber - 1]);
 
             return currentAnimationClipLength;
         }
@@ -468,6 +466,10 @@ public class GuidedTourManager : MonoBehaviour
         currentTransitionType = TransitionType.None;
         currentAnimationClipName = "";
         currentAnimationClipLength = 0;
+
+        // Handle popups
+        UIPopupManager.Instance.UpdatePopup(sceneDataArray[currentSceneNumber - 1]);
+
         afterAnimationCoroutineIsRunning = false;
     }
 
@@ -504,10 +506,22 @@ public class GuidedTourManager : MonoBehaviour
         {
             ar.QueueMessage("SkipTransition");
         }
+
+
+        // Handle popups
+        UIPopupManager.Instance.UpdatePopup(sceneDataArray[currentSceneNumber - 1]);
     }
 
     public void VisitOrSkipNextScene()
     {
+        // First check if we're allowed to go to the next scene
+        // If a multiple choice is assigned to the current scene and it hasn't been completed, we're not allowed to pass through
+        if (!UIPopupManager.Instance.IsNextSceneAllowed())
+            return;
+
+        // If a multiple choice panel is lingering, hide it
+        UIPopupManager.Instance.HideMultipleChoicePanel();
+
         if (GetIsDuringTransition())
         {
             if (GetCurrentTransitionType() == TransitionType.Forward)
@@ -523,6 +537,9 @@ public class GuidedTourManager : MonoBehaviour
 
     public void VisitOrSkipPreviousScene()
     {
+        // If a multiple choice panel is lingering, hide it
+        UIPopupManager.Instance.HideMultipleChoicePanel();
+
         if (GetIsDuringTransition())
         {
             if (GetCurrentTransitionType() == TransitionType.Backward)

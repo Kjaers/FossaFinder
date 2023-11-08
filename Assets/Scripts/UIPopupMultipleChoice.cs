@@ -35,6 +35,7 @@ public class UIPopupMultipleChoice : MonoBehaviour
         if (option.isAnswer)
         {
             Debug.Log("Correct answer clicked!");
+            UIPopupManager.Instance.CompleteMultipleChoice(data);
         }
         else
         {

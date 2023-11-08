@@ -6,9 +6,10 @@ using UnityEngine.UI;
 
 
 
-public class UIPopupManager : MonoBehaviour {
+public class UIPopupManager : MonoBehaviour
+{
 
-    
+
 
     private static UIPopupManager _instance;
     public static UIPopupManager Instance
@@ -16,19 +17,22 @@ public class UIPopupManager : MonoBehaviour {
         get { return _instance; }
     }
     private object _instanceLock = new object();
-    
+
     public Image popupImage;
+    public GameObject popupImagePanel;
     public UIPopupMultipleChoice multipleChoicePanel;
+    
 
     [Serializable]
     public struct ScenePopup
     {
         public SceneData scene;
-        public Image popupImage;
+        public Sprite popupImage;
         public SceneMultipleChoiceData multipleChoiceData;
+        public bool multipleChoiceCompleted;
     }
 
-    private List<ScenePopup> activePopups = new List<ScenePopup>();
+    private List<int> activePopupIndexes = new List<int>();
     public ScenePopup[] scenePopups;
 
     void Awake()
@@ -42,73 +46,122 @@ public class UIPopupManager : MonoBehaviour {
         DontDestroyOnLoad(this.gameObject);
     }
 
+    /// <summary>
+    /// Finds active popups,
+    /// Removes old popups,
+    /// Toggles relevant popups based on scenedata.
+    /// Assign the popups to GuidedTourManager in the editor.
+    /// All assigned popups (image, multiple choice quiz) will trigger when transitioning to the designated scenedata.
+    /// </summary>
+    /// <param name="sceneData"></param>
     public void UpdatePopup(SceneData sceneData)
     {
         // Locking instance to prevent crashing from spamming next/previous
         lock (_instanceLock)
         {
             // Get active popups
-            List<ScenePopup> popupList = GetActivePopups(sceneData);
+            GetActivePopups(sceneData);
 
-            // Remove old popups
-            RemoveUnusedPopups(popupList);
+            // Activate them
+            ActivateActivePopups();
 
-            // Activate active popups (don't do anything if they're already active)
-            ActivateActivePopups(popupList);
 
-            
         }
     }
 
-    private List<ScenePopup> GetActivePopups(SceneData sceneData)
+    /// <summary>
+    /// Finds all popups for the Scenedata parameter
+    /// </summary>
+    /// <param name="sceneData"></param>
+    /// <returns></returns>
+    private void GetActivePopups(SceneData sceneData)
     {
-        List<ScenePopup> popupList = new List<ScenePopup>();
+        activePopupIndexes = new List<int>();
+
         // Grab all relevant popups and add them to a temporary list
         for (int i = 0; i < scenePopups.Length; i++)
         {
             if (scenePopups[i].scene == sceneData)
             {
-                popupList.Add(scenePopups[i]);
+                activePopupIndexes.Add(i);
             }
         }
 
-        return popupList;
     }
 
-    private void RemoveUnusedPopups(List<ScenePopup> popupList)
+    /// <summary>
+    /// Activate popups
+    /// </summary>
+    /// <param name="popupList"></param>
+    private void ActivateActivePopups()
     {
-        List<ScenePopup> popupsToRemove = new List<ScenePopup>();
-        // Remove any popups not in the list
-        for (int i = 0; i < activePopups.Count; i++)
-        {
-            if (!popupList.Contains(activePopups[i]))
-            {
-                popupsToRemove.Add(activePopups[i]);
-            }
-        }
 
-        for (int i = 0; i < popupsToRemove.Count; i++)
-        {
-            activePopups.Remove(popupsToRemove[i]);
-        }
-    }
+        bool imageFound = false;
+        bool quizFound = false;
 
-    private void ActivateActivePopups(List<ScenePopup> popupList)
-    {
         // Add relevant popups to the active popups list and activate them
-        for (int i = 0; i < popupList.Count; i++)
+
+        for (int i = 0; i < activePopupIndexes.Count; i++)
         {
-            if (!activePopups.Contains(popupList[i]))
+            if (scenePopups[activePopupIndexes[i]].popupImage != null)
             {
-                activePopups.Add(popupList[i]);
-
-                if (popupList[i].popupImage != null)
-                    popupImage.sprite = popupList[i].popupImage.sprite;
-
-                if (popupList[i].multipleChoiceData != null)
-                    multipleChoicePanel.Initialize(popupList[i].multipleChoiceData);
-
+                popupImage.sprite = scenePopups[activePopupIndexes[i]].popupImage;
+                imageFound = true;
             }
+
+            if (scenePopups[activePopupIndexes[i]].multipleChoiceData != null)
+            {
+                multipleChoicePanel.Initialize(scenePopups[activePopupIndexes[i]].multipleChoiceData);
+                quizFound = true;
+            }
+        }
+
+        popupImagePanel.gameObject.SetActive(imageFound);
+        multipleChoicePanel.gameObject.SetActive(quizFound);
+    }
+
+    /// <summary> 
+    /// Called from Multiple Choice panel when the correct answer has been clicked.
+    /// </summary>
+    /// <param name="data"></param>
+    public void CompleteMultipleChoice(SceneMultipleChoiceData data)
+    {
+
+        for (int i = 0; i < scenePopups.Length; i++)
+        {
+            if (scenePopups[i].multipleChoiceData == data)
+                scenePopups[i].multipleChoiceCompleted = true;
+        }
+
+    }
+
+    /// <summary>
+    /// Called from GuidedTourManager. Checks to see if multiple choice quiz (or all multiple choice quizzes) for the scene has been completed
+    /// </summary>
+    /// <returns></returns>
+    public bool IsNextSceneAllowed()
+    {
+        bool allowed = true;
+
+        for (int i = 0; i < activePopupIndexes.Count; i++)
+        {
+            if (scenePopups[activePopupIndexes[i]].multipleChoiceData != null)
+                if (!scenePopups[activePopupIndexes[i]].multipleChoiceCompleted)
+                    allowed = false;
+        }
+
+        return allowed;
+    }
+
+    /// <summary>
+    /// If multiple choice panel is open, hide it.
+    /// This is called when navigating away from a scene with a multiple choice panel, to prevent it from floating until animation stops.
+    /// </summary>
+    public void HideMultipleChoicePanel()
+    {
+        if (multipleChoicePanel.gameObject.activeInHierarchy)
+        {
+            multipleChoicePanel.gameObject.SetActive(false);
         }
     }
 

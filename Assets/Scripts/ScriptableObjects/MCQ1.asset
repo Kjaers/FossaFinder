@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9256b17334600842ba7087ef5fd7d9c, type: 3}
-  m_Name: Test
+  m_Name: MCQ1
   m_EditorClassIdentifier: 
   question: The main trunk of the maxillary nerve leaves the pterygopalatine fossa
     via the...
