@@ -44,6 +44,19 @@ public class UIPopupManager : MonoBehaviour
         }
         _instance = this;
         DontDestroyOnLoad(this.gameObject);
+        ResetMultipleChoiceProgress();
+    }
+
+    /// <summary>
+    /// Resets multiple choice progress
+    /// </summary>
+    void ResetMultipleChoiceProgress()
+    {
+        for (int i = 0; i < scenePopups.Length; i++)
+        {
+            if (scenePopups[i].multipleChoiceData != null)
+                scenePopups[i].multipleChoiceData.InitializeChoicesClicked(); 
+        }
     }
 
     /// <summary>
@@ -130,9 +143,36 @@ public class UIPopupManager : MonoBehaviour
         for (int i = 0; i < scenePopups.Length; i++)
         {
             if (scenePopups[i].multipleChoiceData == data)
+            {
                 scenePopups[i].multipleChoiceCompleted = true;
+                for (int j = 0; j < multipleChoicePanel.optionsParent.transform.childCount; j++)
+                {
+                    multipleChoicePanel.optionsParent.transform.GetChild(j).GetComponent<UIPopupMultipleChoiceOption>().UpdateColor();
+                }
+            }
         }
 
+    }
+
+    /// <summary>
+    /// Has this multiple choice been answered correctly? Returns true or false
+    /// </summary>
+    /// <param name="data"></param>
+    /// <returns></returns>
+    public bool IsMultipleChoiceCompleted(SceneMultipleChoiceData data)
+    {
+        for (int i = 0; i < scenePopups.Length; i++)
+        {
+            if (scenePopups[i].multipleChoiceData == data)
+            {
+                Debug.Log("Multiple Choice Completed: " + scenePopups[i].multipleChoiceCompleted);
+                
+                return scenePopups[i].multipleChoiceCompleted;                
+                
+            }
+        }
+
+        return false;
     }
 
     /// <summary>

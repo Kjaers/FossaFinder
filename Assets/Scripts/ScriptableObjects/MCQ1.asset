@@ -22,3 +22,4 @@ MonoBehaviour:
     isAnswer: 0
   - option: Pterygoid canal
     isAnswer: 0
+  choicesClicked: 

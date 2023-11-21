@@ -14,34 +14,33 @@ public class UIPopupMultipleChoice : MonoBehaviour
     public void Initialize(SceneMultipleChoiceData multipleChoiceData)
     {
         data = multipleChoiceData;
-
         questionText.text = data.question;
 
-        ClearOptions();
-        
+        ClearOptions();        
 
         for (int i = 0; i < data.choices.Count; i++)
-        {
+        {           
             GameObject newOption = Instantiate(optionPrefab, optionsParent.transform);
 
-            newOption.GetComponent<UIPopupMultipleChoiceOption>().Initialize(data.choices[i].option, data.choices[i].isAnswer);
+            newOption.GetComponent<UIPopupMultipleChoiceOption>().Initialize(data, i);
 
         }
 
     }
 
-    public void ClickOption(UIPopupMultipleChoiceOption option)
-    {
-        if (option.isAnswer)
-        {
-            Debug.Log("Correct answer clicked!");
-            UIPopupManager.Instance.CompleteMultipleChoice(data);
-        }
-        else
-        {
-            Debug.Log("Incorrect answer clicked!");
-        }
-    }
+    //public void ClickOption(UIPopupMultipleChoiceOption option)
+    //{
+    //    option.wasClicked = true;
+    //    if (option.isAnswer)
+    //    {
+    //        Debug.Log("Correct answer clicked!");
+    //        UIPopupManager.Instance.CompleteMultipleChoice(data);
+    //    }
+    //    else
+    //    {
+    //        Debug.Log("Incorrect answer clicked!");
+    //    }
+    //}
 
     private void ClearOptions()
     {

@@ -182,7 +182,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.21586862, g: 0.35686764, b: 0.5943396, a: 1}
     m_HighlightedColor: {r: 0.1462264, g: 0.73549753, b: 1, a: 0.56078434}
     m_PressedColor: {r: 0.032796368, g: 0.16910319, b: 0.6320754, a: 0.69411767}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.21568628, g: 0.35686275, b: 0.59607846, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -223,7 +223,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e7980cc7c1ec34c96cb097eb7a1bd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isAnswer: 0
 --- !u!114 &114821098322439700
 MonoBehaviour:
   m_ObjectHideFlags: 1
