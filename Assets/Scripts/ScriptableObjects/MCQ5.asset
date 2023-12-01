@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9256b17334600842ba7087ef5fd7d9c, type: 3}
+  m_Name: MCQ5
+  m_EditorClassIdentifier: 
+  question: 'Infiltration Anaesthesia is significantly more effective in the maxilla
+    than the mandible because: '
+  choices:
+  - option: Nerves are larger in the maxilla
+    isAnswer: 0
+  - option: Anatomical landmarks are more difficult to find in the mandible
+    isAnswer: 0
+  - option: Maxillary cortical bone is thinner and less dense than mandibular cortical
+      bone
+    isAnswer: 1
+  - option: There are larger vascular plexuses in the maxillary
+    isAnswer: 0
+  - option: None of the above
+    isAnswer: 0

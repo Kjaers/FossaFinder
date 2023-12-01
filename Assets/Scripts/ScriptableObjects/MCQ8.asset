@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9256b17334600842ba7087ef5fd7d9c, type: 3}
+  m_Name: MCQ8
+  m_EditorClassIdentifier: 
+  question: 'A patient presents requiring restorations on teeth 35 and 36. A newly
+    graduated dentist was struggling with their intraoral landmarks while attempting
+    an Inferior Alveolar Nerve block. The dentist ends up injecting dental anaesthetic
+    into the parotid gland. This can: '
+  choices:
+  - option: Damage the chorda tympani and disrupt taste to the anterior 2/3 of the
+      tongue
+    isAnswer: 0
+  - option: Cause hemi facial paralysis in the muscles of facial expression
+    isAnswer: 1
+  - option: Damage Cranial Nerve V
+    isAnswer: 0
+  - option: Cause permanent paresthesia of V3
+    isAnswer: 0
+  - option: None of the above
+    isAnswer: 0

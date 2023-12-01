@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9256b17334600842ba7087ef5fd7d9c, type: 3}
+  m_Name: MCQ4
+  m_EditorClassIdentifier: 
+  question: 'During a difficult surgical extraction, the nerve emerging from the incisive
+    foramen was severely damaged. This will compromise innervation to:'
+  choices:
+  - option: The teeth of the pre-maxilla (13 to 23)
+    isAnswer: 0
+  - option: Mandibular 1st premolar to midline on the affected side
+    isAnswer: 0
+  - option: The lingual gingiva of the pre-maxilla
+    isAnswer: 1
+  - option: 'The lingual gingiva of the 1st maxillary premolar to the midline on the
+      affected side '
+    isAnswer: 0
+  - option: Both A + C
+    isAnswer: 0
