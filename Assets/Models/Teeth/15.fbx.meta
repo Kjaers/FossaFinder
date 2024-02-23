@@ -1,0 +1,233 @@
+fileFormatVersion: 2
+guid: 24c0bb47c6cc6f0489eed9bd24d942ab
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Indigo_anatomy_upperjaw_stl_cleaner_materialmerger_gles
+    100004: Meshes
+    100006: Object_0
+    100008: Object_0 1
+    100010: Object_1
+    100012: Object_2
+    100014: Object_2 1
+    100016: Object_3
+    100018: Object_4
+    100020: polySurface10
+    100022: polySurface12
+    100024: polySurface14
+    100026: polySurface151
+    100028: polySurface153
+    100030: polySurface2
+    100032: polySurface306
+    100034: polySurface308
+    100036: polySurface310
+    100038: polySurface4
+    100040: polySurface595
+    100042: polySurface599
+    100044: polySurface6
+    100046: polySurface604
+    100048: polySurface605
+    100050: polySurface606
+    100052: polySurface607
+    100054: polySurface608
+    100056: polySurface609
+    100058: polySurface609 1
+    100060: polySurface610
+    100062: polySurface611
+    100064: polySurface612
+    100066: polySurface613
+    100068: polySurface614
+    100070: polySurface615
+    100072: polySurface616
+    100074: polySurface617
+    100076: scene
+    100078: Sketchfab_model
+    100080: transform1
+    100082: transform10
+    100084: transform11
+    100086: transform148
+    100088: transform2
+    100090: transform3
+    100092: transform302
+    100094: transform303
+    100096: transform304
+    100098: transform305
+    100100: transform306
+    100102: transform4
+    100104: transform5
+    100106: transform598
+    100108: transform599
+    100110: transform6
+    100112: transform600
+    100114: transform601
+    100116: transform602
+    100118: transform603
+    100120: transform604
+    100122: transform605
+    100124: transform606
+    100126: transform607
+    100128: transform608
+    100130: transform609
+    100132: transform610
+    100134: transform611
+    100136: transform7
+    100138: transform8
+    100140: transform9
+    400000: //RootNode
+    400002: Indigo_anatomy_upperjaw_stl_cleaner_materialmerger_gles
+    400004: Meshes
+    400006: Object_0
+    400008: Object_0 1
+    400010: Object_1
+    400012: Object_2
+    400014: Object_2 1
+    400016: Object_3
+    400018: Object_4
+    400020: polySurface10
+    400022: polySurface12
+    400024: polySurface14
+    400026: polySurface151
+    400028: polySurface153
+    400030: polySurface2
+    400032: polySurface306
+    400034: polySurface308
+    400036: polySurface310
+    400038: polySurface4
+    400040: polySurface595
+    400042: polySurface599
+    400044: polySurface6
+    400046: polySurface604
+    400048: polySurface605
+    400050: polySurface606
+    400052: polySurface607
+    400054: polySurface608
+    400056: polySurface609
+    400058: polySurface609 1
+    400060: polySurface610
+    400062: polySurface611
+    400064: polySurface612
+    400066: polySurface613
+    400068: polySurface614
+    400070: polySurface615
+    400072: polySurface616
+    400074: polySurface617
+    400076: scene
+    400078: Sketchfab_model
+    400080: transform1
+    400082: transform10
+    400084: transform11
+    400086: transform148
+    400088: transform2
+    400090: transform3
+    400092: transform302
+    400094: transform303
+    400096: transform304
+    400098: transform305
+    400100: transform306
+    400102: transform4
+    400104: transform5
+    400106: transform598
+    400108: transform599
+    400110: transform6
+    400112: transform600
+    400114: transform601
+    400116: transform602
+    400118: transform603
+    400120: transform604
+    400122: transform605
+    400124: transform606
+    400126: transform607
+    400128: transform608
+    400130: transform609
+    400132: transform610
+    400134: transform611
+    400136: transform7
+    400138: transform8
+    400140: transform9
+    2100000: pbr_shader
+    2300000: polySurface609
+    3300000: polySurface609
+    4300000: polySurface609
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

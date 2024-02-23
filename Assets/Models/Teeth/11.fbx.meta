@@ -1,0 +1,165 @@
+fileFormatVersion: 2
+guid: 5ce24064cc7195941bf6376b8508f33f
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Indigo_anatomy_upperjaw_stl_cleaner_materialmerger_gles
+    100004: Meshes
+    100006: Object_0
+    100008: Object_0 1
+    100010: Object_1
+    100012: Object_2
+    100014: Object_2 1
+    100016: Object_3
+    100018: Object_4
+    100020: polySurface10
+    100022: polySurface12
+    100024: polySurface14
+    100026: polySurface151
+    100028: polySurface153
+    100030: polySurface2
+    100032: polySurface306
+    100034: polySurface308
+    100036: polySurface309
+    100038: polySurface4
+    100040: polySurface6
+    100042: scene
+    100044: Sketchfab_model
+    100046: transform1
+    100048: transform10
+    100050: transform11
+    100052: transform148
+    100054: transform2
+    100056: transform3
+    100058: transform302
+    100060: transform303
+    100062: transform4
+    100064: transform5
+    100066: transform6
+    100068: transform7
+    100070: transform8
+    100072: transform9
+    400000: //RootNode
+    400002: Indigo_anatomy_upperjaw_stl_cleaner_materialmerger_gles
+    400004: Meshes
+    400006: Object_0
+    400008: Object_0 1
+    400010: Object_1
+    400012: Object_2
+    400014: Object_2 1
+    400016: Object_3
+    400018: Object_4
+    400020: polySurface10
+    400022: polySurface12
+    400024: polySurface14
+    400026: polySurface151
+    400028: polySurface153
+    400030: polySurface2
+    400032: polySurface306
+    400034: polySurface308
+    400036: polySurface309
+    400038: polySurface4
+    400040: polySurface6
+    400042: scene
+    400044: Sketchfab_model
+    400046: transform1
+    400048: transform10
+    400050: transform11
+    400052: transform148
+    400054: transform2
+    400056: transform3
+    400058: transform302
+    400060: transform303
+    400062: transform4
+    400064: transform5
+    400066: transform6
+    400068: transform7
+    400070: transform8
+    400072: transform9
+    2100000: pbr_shader
+    2300000: polySurface309
+    3300000: polySurface309
+    4300000: polySurface309
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
