@@ -6198,6 +6198,14 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 95f6d3ae66b5d1147a63d3deaf6589f3, type: 2}
+    - target: {fileID: 400006, guid: fca7e4ee17b1bdd4ba15b6104493a6af, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.00831
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: fca7e4ee17b1bdd4ba15b6104493a6af, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0000005
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: fca7e4ee17b1bdd4ba15b6104493a6af, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fca7e4ee17b1bdd4ba15b6104493a6af, type: 3}

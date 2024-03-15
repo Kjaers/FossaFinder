@@ -31,7 +31,7 @@ public class Syringe : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        
+
         if (SyringePositionsParent == null)
         {
             SyringePositionsParent = GameObject.Find("SyringePositions");
@@ -46,22 +46,29 @@ public class Syringe : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    //bool debug = true;
-    //bool ranOnce = false;
     void Update()
     {
-        //if (Time.realtimeSinceStartup > 10 && debug && !ranOnce)
-        //{
-        //    TogglePlunger(true);
-        //    debug = false;
-        //    ranOnce = true;
-        //}
-        //if (Time.realtimeSinceStartup > 20 && !debug)
-        //{
-        //    TogglePlunger(false);
-        //    debug = true;
-        //}
+
+        if (Input.GetKeyDown(KeyCode.F1))
+        {
+            TogglePlunger(!plunge);
+        }
+        if (Input.GetKeyDown(KeyCode.F2))
+        {
+            MoveToPositionIndex(0);
+        }
+        if (Input.GetKeyDown(KeyCode.F3))
+        { 
+            MoveToPositionIndex(1); 
+        }
+        if (Input.GetKeyDown(KeyCode.F4))
+        { 
+            MoveToPositionIndex(2); 
+        }
+        if (Input.GetKeyDown(KeyCode.F5))
+        {
+            MoveToPositionIndex(3);
+        }
 
         if (moving)
         {
@@ -128,6 +135,7 @@ public class Syringe : MonoBehaviour
 
         transform.SetParent(parent.transform, true);
 
+        moveCurrentLerpTime = 0;
         moving = true;
 
 
