@@ -79,5 +79,13 @@ public class UIPopupMultipleChoiceOption : MonoBehaviour
         GetComponent<Button>().colors = colors;
     }
 
+    public void OnHover()
+    {
+        if (data.question.Substring(0, 7) == "Option " && data.question.Length == 8)
+        {
+            UIPopupManager.Instance.syringe.MoveToPositionIndex(choiceIndex);
+        }
+    }
+
 
 }

@@ -21,6 +21,7 @@ public class UIPopupManager : MonoBehaviour
     public Image popupImage;
     public GameObject popupImagePanel;
     public UIPopupMultipleChoice multipleChoicePanel;
+    public Syringe syringe;
     
 
     [Serializable]

@@ -3556,6 +3556,7 @@ MonoBehaviour:
   popupImage: {fileID: 673338479}
   popupImagePanel: {fileID: 1791457483}
   multipleChoicePanel: {fileID: 587301661}
+  syringe: {fileID: 320907035}
   scenePopups:
   - scene: {fileID: 11400000, guid: 1fe482e166d03fb418a340d8abc25c5e, type: 2}
     popupImage: {fileID: 21300000, guid: 84c9b64b1fe63ff40b9caebaa3332ce2, type: 3}
@@ -3631,6 +3632,36 @@ MonoBehaviour:
   - scene: {fileID: 11400000, guid: 56e1c278713973246900db5614cbd4d3, type: 2}
     popupImage: {fileID: 0}
     multipleChoiceData: {fileID: 11400000, guid: bd2ec3e409c6b934d96e8a9fae283822,
+      type: 2}
+    multipleChoiceCompleted: 0
+  - scene: {fileID: 11400000, guid: 8c3902d1bd71a6740bd3242ac3af6edf, type: 2}
+    popupImage: {fileID: 0}
+    multipleChoiceData: {fileID: 11400000, guid: c53fc46d376247143b301a2bbf728550,
+      type: 2}
+    multipleChoiceCompleted: 0
+  - scene: {fileID: 11400000, guid: 6d4abd4d19e190e4f800034efaba0682, type: 2}
+    popupImage: {fileID: 0}
+    multipleChoiceData: {fileID: 11400000, guid: 89afb5d2a0091eb4b89d48394cdc266f,
+      type: 2}
+    multipleChoiceCompleted: 0
+  - scene: {fileID: 11400000, guid: a2bed5fad4bf6be4c8ad8fd19729d49d, type: 2}
+    popupImage: {fileID: 0}
+    multipleChoiceData: {fileID: 11400000, guid: 53cc4a8c761acc143ad43f68537e8438,
+      type: 2}
+    multipleChoiceCompleted: 0
+  - scene: {fileID: 11400000, guid: 180574a366a5f6e4899e8db08b1f4127, type: 2}
+    popupImage: {fileID: 0}
+    multipleChoiceData: {fileID: 11400000, guid: b19dcea244235ff45ac32d1b2df294f9,
+      type: 2}
+    multipleChoiceCompleted: 0
+  - scene: {fileID: 11400000, guid: 92ee1b2cecdeb4e47a04f90aa88f4d87, type: 2}
+    popupImage: {fileID: 0}
+    multipleChoiceData: {fileID: 11400000, guid: 554e7e157f947b849837a7ef46b16e6d,
+      type: 2}
+    multipleChoiceCompleted: 0
+  - scene: {fileID: 11400000, guid: 0aa9ee47528fd104b9d9f365184264b9, type: 2}
+    popupImage: {fileID: 0}
+    multipleChoiceData: {fileID: 11400000, guid: 6ebf654f3cf5eb64582227dc934770bd,
       type: 2}
     multipleChoiceCompleted: 0
 --- !u!1 &186043338
@@ -9584,6 +9615,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b1fa1a1cada42b34a80a0739ef7c755c, type: 2}
   - {fileID: 11400000, guid: 14d2f606ff01ebd4dbf8496576153f9d, type: 2}
   - {fileID: 11400000, guid: 0aa9ee47528fd104b9d9f365184264b9, type: 2}
+  - {fileID: 11400000, guid: 8c3902d1bd71a6740bd3242ac3af6edf, type: 2}
+  - {fileID: 11400000, guid: 6d4abd4d19e190e4f800034efaba0682, type: 2}
+  - {fileID: 11400000, guid: a2bed5fad4bf6be4c8ad8fd19729d49d, type: 2}
+  - {fileID: 11400000, guid: 180574a366a5f6e4899e8db08b1f4127, type: 2}
+  - {fileID: 11400000, guid: 92ee1b2cecdeb4e47a04f90aa88f4d87, type: 2}
 --- !u!4 &440099699
 Transform:
   m_ObjectHideFlags: 0
