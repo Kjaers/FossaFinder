@@ -18,6 +18,7 @@ public class HeadController : MonoBehaviour {
     bool journeyIsSet;
     float fractionOfJourney;
 
+
     //public GameObject smallScaleButton;
     //public GameObject mediumScaleButton;
     //public GameObject largeScaleButton;
@@ -202,4 +203,5 @@ public class HeadController : MonoBehaviour {
     {
         transform.localScale = new Vector3(transform.localScale.x - 1, transform.localScale.y - 1, transform.localScale.z - 1);
     }
+
 }
