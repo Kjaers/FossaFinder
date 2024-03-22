@@ -35,6 +35,11 @@ public class UIPopupMultipleChoiceOption : MonoBehaviour
             if (data.choices[choiceIndex].isAnswer)
             {
                 Debug.Log("Correct answer clicked!");
+                if (CheckIfHoverQuestion())
+                {
+                    //If this is a hover question, perform the correct animation (in this case the only option is the syringe)
+                    UIPopupManager.Instance.syringe.TogglePlunger(true);
+                }
                 UIPopupManager.Instance.CompleteMultipleChoice(data);
             }
             else
@@ -79,11 +84,25 @@ public class UIPopupMultipleChoiceOption : MonoBehaviour
         GetComponent<Button>().colors = colors;
     }
 
+    bool CheckIfHoverQuestion()
+    {
+        if (choiceIndex < data.choices.Count)
+            if (data.choices[choiceIndex].option.Length > 7)
+                if (data.choices[choiceIndex].option.Substring(0, 7) == "Option " && data.choices[choiceIndex].option.Length == 8)
+                {
+                    return true;
+                }
+
+        return false;
+    }
+
     public void OnHover()
     {
-        if (data.choices[choiceIndex].option.Substring(0, 7) == "Option " && data.choices[choiceIndex].option.Length == 8)
+        // Only hover effect is syringe for now, so this only moves the syringe if options are "Option ..."
+        if (CheckIfHoverQuestion())
         {
-            UIPopupManager.Instance.syringe.MoveToPositionIndex(choiceIndex);
+            if (!UIPopupManager.Instance.IsMultipleChoiceCompleted(data))
+                UIPopupManager.Instance.syringe.MoveToPositionIndex(choiceIndex);
         }
     }
 
