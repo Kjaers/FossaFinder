@@ -22,6 +22,9 @@ public class UIPopupManager : MonoBehaviour
     public GameObject popupImagePanel;
     public UIPopupMultipleChoice multipleChoicePanel;
     public Syringe syringe;
+
+    public int correctAnswers = 0;
+    public int incorrectAnswers = 0;
     
 
     [Serializable]
@@ -153,6 +156,14 @@ public class UIPopupManager : MonoBehaviour
             }
         }
 
+    }
+
+    public void AdjustScore(bool correct)
+    {
+        if (correct)
+            correctAnswers++;
+        else
+            incorrectAnswers++;
     }
 
     /// <summary>

@@ -3664,6 +3664,11 @@ MonoBehaviour:
     multipleChoiceData: {fileID: 11400000, guid: 6ebf654f3cf5eb64582227dc934770bd,
       type: 2}
     multipleChoiceCompleted: 0
+  - scene: {fileID: 11400000, guid: 792f6473c34cbb7449af917be51e024b, type: 2}
+    popupImage: {fileID: 0}
+    multipleChoiceData: {fileID: 11400000, guid: 4b1ade35fcebc6e47b1e97795451fffd,
+      type: 2}
+    multipleChoiceCompleted: 0
 --- !u!1 &186043338
 GameObject:
   m_ObjectHideFlags: 0
@@ -9079,7 +9084,7 @@ MonoBehaviour:
     lineCount: 3
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -9636,6 +9641,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a2bed5fad4bf6be4c8ad8fd19729d49d, type: 2}
   - {fileID: 11400000, guid: 180574a366a5f6e4899e8db08b1f4127, type: 2}
   - {fileID: 11400000, guid: 92ee1b2cecdeb4e47a04f90aa88f4d87, type: 2}
+  - {fileID: 11400000, guid: 792f6473c34cbb7449af917be51e024b, type: 2}
 --- !u!4 &440099699
 Transform:
   m_ObjectHideFlags: 0

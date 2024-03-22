@@ -40,10 +40,12 @@ public class UIPopupMultipleChoiceOption : MonoBehaviour
                     //If this is a hover question, perform the correct animation (in this case the only option is the syringe)
                     UIPopupManager.Instance.syringe.TogglePlunger(true);
                 }
+                UIPopupManager.Instance.AdjustScore(true);
                 UIPopupManager.Instance.CompleteMultipleChoice(data);
             }
             else
             {
+                UIPopupManager.Instance.AdjustScore(false);
                 Debug.Log("Incorrect answer clicked!");
             }
 
