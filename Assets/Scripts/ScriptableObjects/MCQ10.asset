@@ -14,7 +14,7 @@ MonoBehaviour:
   question: Select the correct injection location and angle
   choices:
   - option: Option A
-    isAnswer: 0
+    isAnswer: 1
   - option: Option B
     isAnswer: 0
   - option: Option C
