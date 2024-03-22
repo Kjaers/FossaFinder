@@ -81,7 +81,7 @@ public class UIPopupMultipleChoiceOption : MonoBehaviour
 
     public void OnHover()
     {
-        if (data.question.Substring(0, 7) == "Option " && data.question.Length == 8)
+        if (data.choices[choiceIndex].option.Substring(0, 7) == "Option " && data.choices[choiceIndex].option.Length == 8)
         {
             UIPopupManager.Instance.syringe.MoveToPositionIndex(choiceIndex);
         }
