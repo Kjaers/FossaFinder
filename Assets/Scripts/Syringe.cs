@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Experimental.XR.Interaction;
-using UnityEngine.Networking.NetworkSystem;
 
 public class Syringe : MonoBehaviour
 {
@@ -49,26 +47,26 @@ public class Syringe : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.F1))
-        {
-            TogglePlunger(!plunge);
-        }
-        if (Input.GetKeyDown(KeyCode.F2))
-        {
-            MoveToPositionIndex(0);
-        }
-        if (Input.GetKeyDown(KeyCode.F3))
-        { 
-            MoveToPositionIndex(1); 
-        }
-        if (Input.GetKeyDown(KeyCode.F4))
-        { 
-            MoveToPositionIndex(2); 
-        }
-        if (Input.GetKeyDown(KeyCode.F5))
-        {
-            MoveToPositionIndex(3);
-        }
+        //if (Input.GetKeyDown(KeyCode.F1))
+        //{
+        //    TogglePlunger(!plunge);
+        //}
+        //if (Input.GetKeyDown(KeyCode.F2))
+        //{
+        //    MoveToPositionIndex(0);
+        //}
+        //if (Input.GetKeyDown(KeyCode.F3))
+        //{ 
+        //    MoveToPositionIndex(1); 
+        //}
+        //if (Input.GetKeyDown(KeyCode.F4))
+        //{ 
+        //    MoveToPositionIndex(2); 
+        //}
+        //if (Input.GetKeyDown(KeyCode.F5))
+        //{
+        //    MoveToPositionIndex(3);
+        //}
 
         if (moving)
         {
